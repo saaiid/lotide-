@@ -1,5 +1,15 @@
+// ACTUAL FUNCTION
 const middle = function(array) {
-  return array[Math.round((array.length - 1) / 2)];;
+  let middleElements = [];
+  if (array.length <= 2) {
+  return middleElements;
+  } else if (array.length % 2 === 0) {
+  middleElements.push(array[array.length / 2 - 1]);
+  middleElements.push(array[array.length / 2]);
+  } else {
+  middleElements.push(array[Math.floor(array.length / 2)]);
+  }
+  return middleElements;
   }
   
   // Test 1: Array with one element
@@ -15,7 +25,7 @@ const middle = function(array) {
   // Test 4: Array with even number of elements
  console.log(middle([1, 2, 3, 4]), [2, 3]);
  console.log(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-
+  
   // Test 5: Check for empty array
  console.log(middle([]), []);
   
