@@ -13,3 +13,5 @@ assertEqual("lighthouse", "lighthouse");
 assertEqual("Hello", "world");
 assertEqual(20, 20);
 assertEqual(30, 25);
+
+module.exports = assertEqual;
