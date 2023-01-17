@@ -1,3 +1,5 @@
+const assertEqual = require('./assertEqual');
+
 function eqArrays(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -18,10 +20,3 @@ assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
 assertEqual(eqArrays([], []), true);
 assertEqual(eqArrays([1,2], [1]), false);
 
-function assertEqual(actual, expected) {
-  if (actual === expected) {
-    console.log(`PASSED: ${actual} is equal to ${expected}`);
-  } else {
-    console.log(`FAILED: ${actual} is not equal to ${expected}`);
-  }
-}
